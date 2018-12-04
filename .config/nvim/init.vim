@@ -219,7 +219,8 @@ nmap <silent> <Leader>h <Plug>(ale_hover)
 nmap <silent> <Leader>d <Plug>(ale_go_to_definition) 
 nmap <silent> <Leader>r <Plug>(ale_find_references) 
 nmap <silent> <Leader>s :call AleSymbolSearch()<CR>
-
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
 
 " Search / Grep
 command! -bang -nargs=* Rg
@@ -240,6 +241,7 @@ nnoremap <silent> <M-S-p> :History<cr>
 
 " Theme
 set background=dark
+let g:palenight_terminal_italics=1
 colorscheme palenight
 
 " Airline
