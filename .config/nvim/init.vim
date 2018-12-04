@@ -206,8 +206,6 @@ nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR> 
 
-
-
 " ALE / LanguageServer  
 let g:ale_completion_enabled = 1
 " let g:ale_lint_on_text_changed = 'never'
