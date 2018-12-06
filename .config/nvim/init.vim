@@ -185,10 +185,10 @@ call plug#end()
 " ----- Plugin Config ------------
 
 " File extensions - override whatever madness plugins did
-au BufRead,BufNewFile *.tsx set filetype=typescript
-au BufRead,BufNewFile *.ts set filetype=typescript
-au BufRead,BufNewFile *.jsx set filetype=javascript
-au BufRead,BufNewFile *.js set filetype=javascript
+" au BufRead,BufNewFile *.tsx set filetype=typescript
+" au BufRead,BufNewFile *.ts set filetype=typescript
+" au BufRead,BufNewFile *.jsx set filetype=javascript
+" au BufRead,BufNewFile *.js set filetype=javascript
 
 " MatchTagAlways
 let g:mta_filetypes = {
@@ -208,8 +208,8 @@ nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR> 
 
-" ALE / Diagnostics 
-"let g:ale_completion_enabled = 1
+" ALE / Diagnostics (completion is handled by deoplete/LanguageClient)
+" let g:ale_completion_enabled = 1
 " let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_save = 1
 " let g:ale_lint_on_enter = 1
@@ -253,7 +253,10 @@ let g:LanguageClient_serverCommands = {
             \ 'c': ['cquery'],
             \ 'python': ['/Users/aenayet/pyenv/nvim3/bin/pyls'],
             \ 'rust': ['rustup', 'run', 'stable', 'rls'],
-            \ 'typescript': ['tsserver'],
+            \ 'javascript': ['javascript-typescript-stdio'],
+            \ 'javascript.jsx': ['javascript-typescript-stdio'],
+            \ 'typescript': ['javascript-typescript-stdio'],
+            \ 'typescript.tsx': ['javascript-typescript-stdio'],
             \ 'haskell': ['hie-wrapper']
             \ }
 let g:LanguageClient_autoStart = 1
@@ -264,9 +267,14 @@ let g:LanguageClient_rootMarkers = {
             \ }
 set completefunc=LanguageClient#complete
 set formatexpr=LanguageClient_textDocument_rangeFormatting()
-let g:LanguageClient_loadSettings = 1
-let g:LanguageClient_settingsPath = '/Users/aenayet/.config/nvim/settings.json'
-
+let g:LanguageClient_diagnosticsEnable=0 " Let ALE handle linting
+" Needed to not overrwrite ale colors
+let g:LanguageClient_diagnosticsDisplay = { 
+\   1: { 'signTexthl': 'Error' },
+\   2: { 'signTexthl': 'Todo' },
+\   3: { 'signTexthl': 'Todo' },
+\   4: { 'signTexthl': 'Todo' },
+\}
 " Search / Grep
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
