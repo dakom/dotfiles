@@ -252,7 +252,7 @@ let g:LanguageClient_serverCommands = {
             \ 'cpp': ['cquery'],
             \ 'c': ['cquery'],
             \ 'python': ['/Users/aenayet/pyenv/nvim3/bin/pyls'],
-            \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+            \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
             \ 'javascript': ['javascript-typescript-stdio'],
             \ 'javascript.jsx': ['javascript-typescript-stdio'],
             \ 'typescript': ['javascript-typescript-stdio'],
