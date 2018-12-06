@@ -161,9 +161,8 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'Asheq/close-buffers.vim'
 
 " LanguageServer (diagnostics, completion, etc.)
-Plug 'w0rp/ale'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bass -d ./install.sh', }
+" Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " Search / Grep
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -213,68 +212,20 @@ nnoremap <silent> <S-F12> :bp<CR>
 " let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_save = 1
 " let g:ale_lint_on_enter = 1
-nmap <silent> <Leader>i <Plug>(ale_detail)
-nmap <silent> <Leader>l <Plug>(ale_lint)
-nmap <silent> <Leader>j <Plug>(ale_next_wrap)
-nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
-nmap <silent> <Leader>h <Plug>(ale_hover) 
-nmap <silent> <Leader>d <Plug>(ale_go_to_definition) 
-nmap <silent> <Leader>r <Plug>(ale_find_references) 
-nmap <silent> <Leader>s :call AleSymbolSearch()<CR>
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
+" nmap <silent> <Leader>i <Plug>(ale_detail)
+" nmap <silent> <Leader>l <Plug>(ale_lint)
+" nmap <silent> <Leader>j <Plug>(ale_next_wrap)
+" nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
+" nmap <silent> <Leader>h <Plug>(ale_hover) 
+" nmap <silent> <Leader>d <Plug>(ale_go_to_definition) 
+" nmap <silent> <Leader>r <Plug>(ale_find_references) 
+" nmap <silent> <Leader>s :call AleSymbolSearch()<CR>
+" let g:ale_sign_error = '✘'
+" let g:ale_sign_warning = '⚠'
 
-" Deoplete / Completion
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-let b:deoplete_disable_auto_complete=1
-let g:deoplete_disable_auto_complete=1
-call deoplete#custom#source('LanguageClient', 'min_pattern_length', 2)
-if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
-endif
-call deoplete#custom#source('_', 'disabled_syntaxes', ['Comment', 'String']) " Disable the candidates in Comment/String syntaxes.
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-call deoplete#custom#option('sources', {
-            \ 'python': ['LanguageClient'],
-            \ 'python3': ['LanguageClient'],
-            \ 'cpp': ['LanguageClient'],
-            \ 'c': ['LanguageClient'],
-            \ 'rust': ['LanguageClient'],
-            \ 'typescript': ['LanguageClient'],
-            \ 'vim': ['vim'],
-            \})
-let g:deoplete#ignore_sources = {}
-let g:deoplete#ignore_sources._ = ['buffer', 'around'] " ignored sources
+" Coc / LanguageServer Autocomplete
+source $HOME/.config/nvim/config/coc.vim
 
-" Lanugage Client
-let g:LanguageClient_serverCommands = {
-            \ 'cpp': ['cquery'],
-            \ 'c': ['cquery'],
-            \ 'python': ['/Users/aenayet/pyenv/nvim3/bin/pyls'],
-            \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-            \ 'javascript': ['javascript-typescript-stdio'],
-            \ 'javascript.jsx': ['javascript-typescript-stdio'],
-            \ 'typescript': ['javascript-typescript-stdio'],
-            \ 'typescript.tsx': ['javascript-typescript-stdio'],
-            \ 'haskell': ['hie-wrapper']
-            \ }
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_rootMarkers = {
-            \ 'cpp': ['compile_commands.json', 'build'],
-            \ 'c': ['compile_commands.json', 'build'],
-            \ 'haskell': ['*.cabal', 'stack.yaml'],
-            \ }
-set completefunc=LanguageClient#complete
-set formatexpr=LanguageClient_textDocument_rangeFormatting()
-let g:LanguageClient_diagnosticsEnable=0 " Let ALE handle linting
-" Needed to not overrwrite ale colors
-let g:LanguageClient_diagnosticsDisplay = { 
-\   1: { 'signTexthl': 'Error' },
-\   2: { 'signTexthl': 'Todo' },
-\   3: { 'signTexthl': 'Todo' },
-\   4: { 'signTexthl': 'Todo' },
-\}
 " Search / Grep
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
