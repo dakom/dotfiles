@@ -160,8 +160,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " toggle with F6
 Plug 'jlanzarotta/bufexplorer'
 Plug 'Asheq/close-buffers.vim'
 
-" LanguageServer
+" LanguageServer (diagnostics, completion, etc.)
 Plug 'w0rp/ale'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bass -d ./install.sh', }
 
 " Search / Grep
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -183,10 +185,10 @@ call plug#end()
 " ----- Plugin Config ------------
 
 " File extensions - override whatever madness plugins did
-" au BufRead,BufNewFile *.tsx set filetype=typescript
-" au BufRead,BufNewFile *.ts set filetype=typescript
-" au BufRead,BufNewFile *.jsx set filetype=javascript
-" au BufRead,BufNewFile *.js set filetype=javascript
+au BufRead,BufNewFile *.tsx set filetype=typescript
+au BufRead,BufNewFile *.ts set filetype=typescript
+au BufRead,BufNewFile *.jsx set filetype=javascript
+au BufRead,BufNewFile *.js set filetype=javascript
 
 " MatchTagAlways
 let g:mta_filetypes = {
@@ -206,8 +208,8 @@ nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR> 
 
-" ALE / LanguageServer  
-let g:ale_completion_enabled = 1
+" ALE / Diagnostics 
+"let g:ale_completion_enabled = 1
 " let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_save = 1
 " let g:ale_lint_on_enter = 1
@@ -221,6 +223,49 @@ nmap <silent> <Leader>r <Plug>(ale_find_references)
 nmap <silent> <Leader>s :call AleSymbolSearch()<CR>
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
+
+" Deoplete / Completion
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+let b:deoplete_disable_auto_complete=1
+let g:deoplete_disable_auto_complete=1
+call deoplete#custom#source('LanguageClient', 'min_pattern_length', 2)
+if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {}
+endif
+call deoplete#custom#source('_', 'disabled_syntaxes', ['Comment', 'String']) " Disable the candidates in Comment/String syntaxes.
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+call deoplete#custom#option('sources', {
+            \ 'python': ['LanguageClient'],
+            \ 'python3': ['LanguageClient'],
+            \ 'cpp': ['LanguageClient'],
+            \ 'c': ['LanguageClient'],
+            \ 'rust': ['LanguageClient'],
+            \ 'typescript': ['LanguageClient'],
+            \ 'vim': ['vim'],
+            \})
+let g:deoplete#ignore_sources = {}
+let g:deoplete#ignore_sources._ = ['buffer', 'around'] " ignored sources
+
+" Lanugage Client
+let g:LanguageClient_serverCommands = {
+            \ 'cpp': ['cquery'],
+            \ 'c': ['cquery'],
+            \ 'python': ['/Users/aenayet/pyenv/nvim3/bin/pyls'],
+            \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+            \ 'typescript': ['tsserver'],
+            \ 'haskell': ['hie-wrapper']
+            \ }
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_rootMarkers = {
+            \ 'cpp': ['compile_commands.json', 'build'],
+            \ 'c': ['compile_commands.json', 'build'],
+            \ 'haskell': ['*.cabal', 'stack.yaml'],
+            \ }
+set completefunc=LanguageClient#complete
+set formatexpr=LanguageClient_textDocument_rangeFormatting()
+let g:LanguageClient_loadSettings = 1
+let g:LanguageClient_settingsPath = '/Users/aenayet/.config/nvim/settings.json'
 
 " Search / Grep
 command! -bang -nargs=* Rg
