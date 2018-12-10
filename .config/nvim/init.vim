@@ -170,7 +170,7 @@ Plug 'junegunn/fzf.vim'
 
 " Syntax
 Plug 'tikhomirov/vim-glsl'
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Valloric/MatchTagAlways'
 

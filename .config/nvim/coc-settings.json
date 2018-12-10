@@ -1,13 +1,5 @@
 {
   "coc.preferences.timeout": 5000,
   "coc.preferences.acceptSuggestionOnCommitCharacter": true,
-  "tslint.enable": false,
-  "coc.preferences.autoTrigger": "always",
-  "rls": {
-      "command": "rustup",
-      "trace.server": "verbose",
-      "args": ["run", "nightly", "rls"],
-      "filetypes": ["rust"],
-      "settings": {}
-    }
+  "coc.preferences.autoTrigger": "always"
 }
