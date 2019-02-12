@@ -1,3 +1,8 @@
+## TODO (nice to haves)
+
+* ✡️ in the prompt (see https://github.com/JanDeDobbeleer/oh-my-posh/issues/128)
+* be able to cd ~/links/project/etc.
+
 ## Steps
 
 **Install core things w/o Chocolatey** 
@@ -59,14 +64,10 @@ git config --global core.autocrlf true
 * npm install -g neovim
 * merge the included `install-neovim-context.reg` to get the context menus
 * Install all the Neoclide extensions via `:CocInstall` e.g. `:CocInstall coc-json coc-css coc-tsserver coc-rls coc-yaml`
+* add environment var: `FZF_DEFAULT_COMMAND` to `'rg --files --hidden --glob "!.git/*"'`
 
 **Setup key mapping**
 * use SharpKeys
-
-## TODO (nice to haves)
-
-* ✡️ in the prompt (see https://github.com/JanDeDobbeleer/oh-my-posh/issues/128)
-* be able to cd ~/links/project/etc.
 
 ## References
 
