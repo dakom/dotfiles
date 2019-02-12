@@ -16,11 +16,20 @@
 * Specific config stuff below
 
 ## References
+
+**Chocolatey**
+* https://github.com/felixrieseberg/windows-development-environment
+
+**Posh-git**
+* https://github.com/dahlbyk/posh-git/issues/583#issuecomment-402711469
+
+**More git + powershell stuff**
 * https://hodgkins.io/ultimate-powershell-prompt-and-git-setup#posh-git-and-ssh-agent
 * https://blog.frankfu.com.au/2018/12/15/ssh-on-windows-10-1803/
-* https://github.com/felixrieseberg/windows-development-environment
 * https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
 
+**Fonts**
+* https://github.com/ryanoasis/nerd-fonts
 (used FiraCode... or was it FiraCode mono retina something or other)
 
 ## git config
@@ -30,6 +39,9 @@ git config --global user.email "your@email.com"
 git config --global user.name "Your Name"
 git config --global push.default simple
 git config --global core.ignorecase false
+
+# SSH for windows
+git config --global core.sshCommand "'C:\WINDOWS\System32\OpenSSH\ssh.exe'"
 
 # Configure line endings for windows
 git config --global core.autocrlf true
