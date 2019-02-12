@@ -16,11 +16,24 @@
 * Specific config stuff below
 
 ## References
+* https://hodgkins.io/ultimate-powershell-prompt-and-git-setup#posh-git-and-ssh-agent
 * https://blog.frankfu.com.au/2018/12/15/ssh-on-windows-10-1803/
 * https://github.com/felixrieseberg/windows-development-environment
 * https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
 
 (used FiraCode... or was it FiraCode mono retina something or other)
+
+## git config
+
+```
+git config --global user.email "your@email.com"
+git config --global user.name "Your Name"
+git config --global push.default simple
+git config --global core.ignorecase false
+
+# Configure line endings for windows
+git config --global core.autocrlf true
+```
 
 ## hyper.js
 
