@@ -1,5 +1,5 @@
-https://github.com/felixrieseberg/windows-development-environment
-https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
+1. https://github.com/felixrieseberg/windows-development-environment
+2. https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
 
 hyper.js:
 
