@@ -58,6 +58,7 @@ git config --global core.autocrlf true
 * pip install pynvim
 * npm install -g neovim
 * merge the included `install-neovim-context.reg` to get the context menus
+* Install all the Neoclide extensions via `:CocInstall` e.g. `:CocInstall coc-json coc-css coc-tsserver coc-rls coc-yaml`
 
 **Setup key mapping**
 * use SharpKeys
