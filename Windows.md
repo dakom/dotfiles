@@ -1,7 +1,25 @@
-1. https://github.com/felixrieseberg/windows-development-environment
-2. https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
+## TODO (essential)
 
-hyper.js:
+* ssh-agent working with git
+* neovim encoding proper
+
+## TODO (nice to haves)
+
+* ✡️ in the prompt
+* be able to cd ~/links/project/etc.
+
+## General ideas
+
+* Chocolatey to install most things (exceptions: windows apps, dropbox, adobe)
+* Hyper for making powershell nicer (on that note... use powershell instead of wsl/git-bash/etc.)
+* Specific config stuff below
+
+## References
+
+* https://github.com/felixrieseberg/windows-development-environment
+* https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
+
+## hyper.js
 
 ```
 // Future versions of Hyper may add additional config options,
@@ -161,7 +179,7 @@ module.exports = {
 ```
 
 
-powershell profile:
+## powershell profile
 
 ```
 # Increase history
