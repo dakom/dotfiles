@@ -25,13 +25,15 @@ endif
 if g:os == "Darwin"
     set guifont=FuraCode\ Nerd\ Font:h13
 elseif g:os == "Windows"
-    "just use regular Fira Code - shows in gui dropdown too
-    set guifont=Fira\ Code:h11
+    set guifont=FuraCode\ NF:h13
 else
     set guifont=FuraCode\ Nerd\ Font\ Retina\ 13
 endif
 
+
 " enable true colors support
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
 " turn off visual bell - fixes issues with scrolling
@@ -224,7 +226,10 @@ nnoremap <silent> <S-F12> :bp<CR>
 " let g:ale_sign_warning = '⚠'
 
 " Coc / LanguageServer Autocomplete
-source $HOME/.config/nvim/config/coc.vim
+let cocpath = stdpath('config').'/config/coc.vim'
+execute ("source ". cocpath)
+
+" source stdpath('config').'/config/coc.vim'
 
 " Search / Grep
 command! -bang -nargs=* Rg
