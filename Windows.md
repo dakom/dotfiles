@@ -2,6 +2,7 @@
 
 * ✡️ in the prompt (see https://github.com/JanDeDobbeleer/oh-my-posh/issues/128)
 * be able to cd ~/links/project/etc.
+* Get ligatures and true color working nicely in Alacritty
 
 ## Steps
 
