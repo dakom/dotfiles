@@ -19,6 +19,8 @@
 * https://github.com/felixrieseberg/windows-development-environment
 * https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
 
+(used FiraCode... or was it FiraCode mono retina something or other)
+
 ## hyper.js
 
 ```
