@@ -12,10 +12,11 @@
 
 * Chocolatey to install most things (exceptions: windows apps, dropbox, adobe)
 * Hyper for making powershell nicer (on that note... use powershell instead of wsl/git-bash/etc.)
+* Native SSH
 * Specific config stuff below
 
 ## References
-
+* https://blog.frankfu.com.au/2018/12/15/ssh-on-windows-10-1803/
 * https://github.com/felixrieseberg/windows-development-environment
 * https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
 
