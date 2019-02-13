@@ -1,3 +1,29 @@
+﻿# posh-git
+Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
+
+# oh my posh
+Import-Module oh-my-posh
+Set-Theme David
+#disables when it matches... so gotta make it match username!
+# $DefaultUser="david"
+# Would be nice: 
+$ThemeSettings.PromptSymbols.PromptIndicator = "✡"
+
+# https://github.com/dahlbyk/posh-git/issues/583#issuecomment-402711469
+[System.Environment]::SetEnvironmentVariable("SSH_AUTH_SOCK", $null)
+[System.Environment]::SetEnvironmentVariable("SSH_AGENT_PID", $null)
+
+# Start SSH 
+# Start-SshAgent
+
+# Increase history
+$MaximumHistoryCount = 10000
+
+# Produce UTF-8 by default
+$PSDefaultParameterValues["Out-File:Encoding"]="utf8"
+
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
 # Helper Functions
 #######################################################
 
@@ -150,34 +176,3 @@ del alias:gp -Force
 Set-Alias -Name gc -Value checkout
 Set-Alias -Name gp -Value pull
 
-# Extra goodies
-#######################################################
-Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
-
-
-# Disabling oh-my-posh for now...
-# Import-Module oh-my-posh
-# Set-Theme David
-# Would be nice: 
-# $ThemeSettings.PromptSymbols.MySymbol = "✡"
-# Still cool:
-# $ThemeSettings.PromptSymbols.MySymbol = "dakom"
-# $ThemeSettings.Colors.MyIconForegroundColor = "DarkGray"
-
-# https://github.com/dahlbyk/posh-git/issues/583#issuecomment-402711469
-[System.Environment]::SetEnvironmentVariable("SSH_AUTH_SOCK", $null)
-[System.Environment]::SetEnvironmentVariable("SSH_AGENT_PID", $null)
-
-# Start SSH 
-# Start-SshAgent
-
-# Increase history
-$MaximumHistoryCount = 10000
-
-# Produce UTF-8 by default
-$PSDefaultParameterValues["Out-File:Encoding"]="utf8"
-
-$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [System.Text.Encoding]::UTF8
-
-# Show selection menu for tab
-Set-PSReadlineKeyHandler -Chord Tab -Function MenuComplete

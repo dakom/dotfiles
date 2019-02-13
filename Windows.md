@@ -14,6 +14,7 @@
 
 
 **Install things w/ Chocolatey**
+* ConEmu
 * Chrome
 * git
 * poshgit
@@ -29,11 +30,16 @@
 * nodepad++
 
 
+**ConEmu config**
+* Set to use powershell
+* Change powershell launch config to powershell.exe -NoLogo
+
 **Powershell config**
 * Copy [windows-files/powershell-profile.ps1] to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
 
-**Oh-My-Posh config (currently disabled) but good to have setup**
+**Oh-My-Posh config**
 * copy [windows-files/oh-my-posh/David.psm1] to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\WindowsPowerShell\Modules\oh-my-posh\2.0.245\Themes)
+* if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
 
 **SSH Config**
 * Add SSH keys: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
