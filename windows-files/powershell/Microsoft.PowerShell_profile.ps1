@@ -153,13 +153,15 @@ Set-Alias -Name gp -Value pull
 # Extra goodies
 #######################################################
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
-Import-Module oh-my-posh
-Set-Theme David
+
+# Disabling oh-my-posh for now...
+# Import-Module oh-my-posh
+# Set-Theme David
 # Would be nice: 
 # $ThemeSettings.PromptSymbols.MySymbol = "✡"
 # Still cool:
-$ThemeSettings.PromptSymbols.MySymbol = "dakom"
-$ThemeSettings.Colors.MyIconForegroundColor = "DarkGray"
+# $ThemeSettings.PromptSymbols.MySymbol = "dakom"
+# $ThemeSettings.Colors.MyIconForegroundColor = "DarkGray"
 
 # https://github.com/dahlbyk/posh-git/issues/583#issuecomment-402711469
 [System.Environment]::SetEnvironmentVariable("SSH_AUTH_SOCK", $null)
