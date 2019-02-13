@@ -154,6 +154,7 @@ Set-Alias -Name gp -Value pull
 #######################################################
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 
+
 # Disabling oh-my-posh for now...
 # Import-Module oh-my-posh
 # Set-Theme David
