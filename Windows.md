@@ -37,10 +37,10 @@
 * ConEmu.xml is here in [windows-files/conemu](windows-files/conemu)
 
 **Powershell config**
-* Copy [windows-files/powershell-profile.ps1] to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
+* Copy [windows-files/powershell/Microsoft.PowerShell_profile.ps1](windows-files/powershell/Microsoft.PowerShell_profile.ps1) to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
 
 **Oh-My-Posh config**
-* copy [windows-files/oh-my-posh/David.psm1] to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\WindowsPowerShell\Modules\oh-my-posh\2.0.245\Themes)
+* copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\WindowsPowerShell\Modules\oh-my-posh\2.0.245\Themes)
 * if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
 
 **SSH Config**
@@ -70,7 +70,7 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 **Neovim config**
 * pip install pynvim
 * npm install -g neovim
-* merge [windows-files/neovim/install-neovim-context.reg] to get the context menus
+* merge [windows-files/neovim/install-neovim-context.reg](windows-files/neovim/install-neovim-context.reg) to get the context menus
 * Install all the Neoclide extensions via `:CocInstall` e.g. `:CocInstall coc-json coc-css coc-tsserver coc-rls coc-yaml`
 * add environment var: `FZF_DEFAULT_COMMAND` to `'rg --files --hidden --glob "!.git/*"'`
 
