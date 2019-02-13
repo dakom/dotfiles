@@ -58,6 +58,7 @@ git config --global core.ignorecase false
 # The above are generic, the following are strictly windows-only
 git config --global core.sshCommand "'C:\WINDOWS\System32\OpenSSH\ssh.exe'"
 git config --global core.autocrlf true
+git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 ```
 
 **Clone this repo to ~/dotfiles**
