@@ -28,19 +28,11 @@
 * ripgrep
 * nodepad++
 
-**Install things not on Chocolatey yet**
-* Alacritty
-
-**Alacritty config**
-* Manually put in Program Files\Alacritty
-* Manually add path to environment
-* copy contents from [windows-files/alacritty/alacritty.yml] to the destination (~\AppData\Roaming\alacritty\alacritty.yml - not part of dotfiles yet, see https://github.com/jwilm/alacritty/issues/2108)
-* Merge [windows-files/alacritty/install-alacritty-neovim-context.reg] to get context menus
 
 **Powershell config**
 * Copy [windows-files/powershell-profile.ps1] to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
 
-**Oh-My-Posh config**
+**Oh-My-Posh config (currently disabled) but good to have setup**
 * copy [windows-files/oh-my-posh/David.psm1] to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\WindowsPowerShell\Modules\oh-my-posh\2.0.245\Themes)
 
 **SSH Config**
@@ -59,6 +51,7 @@ git config --global core.ignorecase false
 git config --global core.sshCommand "'C:\WINDOWS\System32\OpenSSH\ssh.exe'"
 git config --global core.autocrlf true
 git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
+
 ```
 
 **Clone this repo to ~/dotfiles**
