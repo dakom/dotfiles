@@ -33,6 +33,8 @@
 **ConEmu config**
 * Set to use powershell
 * Change powershell launch config to powershell.exe -NoLogo
+* Change theme to Babun
+* ConEmu.xml is here in [windows-files/conemu](windows-files/conemu)
 
 **Powershell config**
 * Copy [windows-files/powershell-profile.ps1] to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
