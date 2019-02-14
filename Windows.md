@@ -28,7 +28,11 @@
 * fzf
 * ripgrep
 * nodepad++
+* gcloudsdk
 
+**Install things w/ npm**
+* npm-upgrade
+* firebase-tools
 
 **ConEmu config**
 * Set to use powershell
@@ -76,6 +80,10 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 
 **Setup key mapping**
 * use SharpKeys
+
+**gcloud config**
+* might need to use cmd instead of powershell because gcloud tools suck and don't support unicode?
+* gcloud components install beta
 
 ## References
 
