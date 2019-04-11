@@ -1,17 +1,14 @@
-## TODO (nice to haves)
 
-* Get powershell (and hence alacritty?) to work with proper unicode
-* be able to cd ~/links/project/etc.
-* Get ligatures and true color working nicely in Alacritty (e.g. to open nvim)
 
 ## Steps
 
 **Install core things w/o Chocolatey** 
-* Dropbox
-* Adobe Cloud, 
 * Chocolatey itself
-* drivers
-
+* Office
+* Adobe Cloud
+* Nvidia GameReady
+* Dropbox
+* other drivers
 
 **Install things w/ Chocolatey**
 * ConEmu
@@ -101,3 +98,9 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 **Fonts**
 * https://github.com/ryanoasis/nerd-fonts
 (used FiraCode... or was it FiraCode mono retina something or other)
+
+## TODO (nice to haves)
+
+* Get powershell (and hence alacritty?) to work with proper unicode
+* be able to cd ~/links/project/etc.
+* Get ligatures and true color working nicely in Alacritty (e.g. to open nvim)
