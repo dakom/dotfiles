@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-02-13 19:30:16" build="190108">
-			<value name="StartType" type="hex" data="02"/>
-			<value name="CmdLine" type="string" data=""/>
+		<key name=".Vanilla" modified="2019-04-12 12:11:00" build="190331">
+			<value name="StartType" type="hex" data="00"/>
+			<value name="CmdLine" type="string" data="powershell.exe -nologo"/>
 			<value name="StartTasksFile" type="string" data=""/>
-			<value name="StartTasksName" type="string" data="{Shells::PowerShell}"/>
+			<value name="StartTasksName" type="string" data="{Shells::cmd}"/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="ColorTable00" type="dword" data="001e1d1b"/>
@@ -242,10 +242,10 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="-1866"/>
-			<value name="ConWnd Y" type="long" data="128"/>
-			<value name="LastMonitor" type="string" data="-1920,0,0,1040"/>
-			<value name="ConWnd Width" type="dword" data="0000003a"/>
+			<value name="ConWnd X" type="long" data="161"/>
+			<value name="ConWnd Y" type="long" data="260"/>
+			<value name="LastMonitor" type="string" data="0,0,2560,1440"/>
+			<value name="ConWnd Width" type="dword" data="0000005a"/>
 			<value name="ConWnd Height" type="dword" data="00000019"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="Language" type="string" data="en"/>
@@ -320,8 +320,8 @@
 			<value name="Multi.Iterate" type="hex" data="01"/>
 			<value name="Multi.SplitWidth" type="hex" data="04"/>
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
-			<value name="FontName" type="string" data="FuraCode NF"/>
-			<value name="FontName2" type="string" data="Consolas"/>
+			<value name="FontName" type="string" data="Consolas"/>
+			<value name="FontName2" type="string" data="FuraCode Nerd Font Mono"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
 			<value name="FontSizeX2" type="ulong" data="0"/>
@@ -687,6 +687,10 @@
 			<key name="Colors" modified="2019-02-13 18:12:33" build="190108">
 				<value name="Count" type="long" data="0"/>
 			</key>
+			<value name="CmdLineHistory" type="multi">
+				<line data="{Shells::PowerShell (Admin)}"/>
+			</value>
+			<value name="AnsiLogCodes" type="hex" data="00"/>
 		</key>
 		<key name="shell" modified="2019-02-13 18:36:22" build="190108">
 			<value name="StartType" type="hex" data="02"/>
