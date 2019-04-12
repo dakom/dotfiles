@@ -16,9 +16,10 @@
 * git
 * poshgit
 * neovim
-* node
+* node (nodejs.install)
 * yarn
 * python
+* python2
 * pip
 * slack
 * gitter
@@ -26,7 +27,7 @@
 * fzf
 * ripgrep
 * nodepad++
-* gcloudsdk
+* gcloudsdk (might need python2 to be higher in path??)
 
 **Install things w/ npm**
 * npm-upgrade
@@ -47,8 +48,9 @@
 
 **SSH Config**
 * Add SSH keys: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+* Set ssh-agent to start automatically (in windows services: OpenSSH agent)
 * Make sure SSH is all good (might only need to add passphrase once for ssh agent?)
-* Set ssh-agent to start manually... I think, might need to double-check that
+
 
 **Git config**
 * Do the following:
