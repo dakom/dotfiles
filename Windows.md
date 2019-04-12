@@ -10,7 +10,7 @@
 * Dropbox
 * oh-my-posh (maybe poshgit module too even though it's also on choco?)
 * SharpKeys: https://github.com/randyrants/sharpkeys/releases
-* Rust
+* Rust (and C++ windows build tools as a pre-requisite)
 * other drivers
 
 **Install things w/ Chocolatey**
