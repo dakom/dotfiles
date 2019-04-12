@@ -8,6 +8,7 @@
 * Adobe Cloud
 * Nvidia GameReady
 * Dropbox
+* oh-my-posh
 * other drivers
 
 **Install things w/ Chocolatey**
@@ -16,9 +17,10 @@
 * git
 * poshgit
 * neovim
-* node
+* node (nodejs.install)
 * yarn
 * python
+* python2
 * pip
 * slack
 * gitter
@@ -26,7 +28,7 @@
 * fzf
 * ripgrep
 * nodepad++
-* gcloudsdk
+* gcloudsdk (might need python2 to be higher in path??)
 
 **Install things w/ npm**
 * npm-upgrade
@@ -37,6 +39,8 @@
 * Change powershell launch config to powershell.exe -NoLogo
 * Change theme to Babun
 * ConEmu.xml is here in [windows-files/conemu](windows-files/conemu)
+* Use ConEmu settings -> Integration to register context menu
+  * {powershell} -cur_console:n
 
 **Powershell config**
 * Copy [windows-files/powershell/Microsoft.PowerShell_profile.ps1](windows-files/powershell/Microsoft.PowerShell_profile.ps1) to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
@@ -47,8 +51,9 @@
 
 **SSH Config**
 * Add SSH keys: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+* Set ssh-agent to start automatically (in windows services: OpenSSH agent)
 * Make sure SSH is all good (might only need to add passphrase once for ssh agent?)
-* Set ssh-agent to start manually... I think, might need to double-check that
+
 
 **Git config**
 * Do the following:
