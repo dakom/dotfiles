@@ -21,6 +21,7 @@
 * python
 * pip
 * slack
+* gitter
 * vlc
 * fzf
 * ripgrep
