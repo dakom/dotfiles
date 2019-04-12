@@ -8,6 +8,7 @@
 * Adobe Cloud
 * Nvidia GameReady
 * Dropbox
+* oh-my-posh
 * other drivers
 
 **Install things w/ Chocolatey**
