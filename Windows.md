@@ -8,7 +8,8 @@
 * Adobe Cloud
 * Nvidia GameReady
 * Dropbox
-* oh-my-posh
+* oh-my-posh (maybe poshgit module too even though it's also on choco?)
+* SharpKeys: https://github.com/randyrants/sharpkeys/releases
 * other drivers
 
 **Install things w/ Chocolatey**
