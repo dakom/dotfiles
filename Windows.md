@@ -76,6 +76,13 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 * git clone git@github.com:dakom/dotfiles.git
 * Set environment variable `XDG_CONFIG_HOME = ~/dotfiles/.config` (probably use windows path e.g. C:\Users\David\dotfiles\.config)
 
+**Python config**
+* It's a little annoying since google cloud needs python2 and we want both for vim
+* Currently - install python3 and python2, making python2 the default
+* install pip via choco
+* try renaming python37\python.exe to python3.exe
+* try installing pip locally through there and get-pip.py (available in web search)
+
 **Neovim config**
 * pip install pynvim
 * npm install -g neovim
