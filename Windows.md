@@ -40,6 +40,7 @@
 * Change theme to Babun
 * ConEmu.xml is here in [windows-files/conemu](windows-files/conemu)
 * Use ConEmu settings -> Integration to register context menu
+  * {powershell} -cur_console:n
 
 **Powershell config**
 * Copy [windows-files/powershell/Microsoft.PowerShell_profile.ps1](windows-files/powershell/Microsoft.PowerShell_profile.ps1) to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
