@@ -1,10 +1,11 @@
 {
     "workbench.colorTheme": "Ayu One Dark Pro | Mirage",
     "editor.fontLigatures": true,
-    "editor.fontFamily": "FuraCode Nerd Font Mono",
+    "editor.fontFamily": "FuraCode Nerd Font Retina",
     "editor.fontSize": 17,
     "editor.minimap.enabled": false,
     "editor.hover.enabled": false,
+    "editor.parameterHints.enabled": false,
     "workbench.editor.enablePreview": false,
     "editor.quickSuggestions": true,
     "editor.acceptSuggestionOnEnter": "on",
