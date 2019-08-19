@@ -1,0 +1,64 @@
+{
+    "workbench.colorTheme": "Ayu One Dark Pro | Mirage",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "FuraCode Nerd Font Mono",
+    "editor.fontSize": 17,
+    "editor.minimap.enabled": false,
+    "editor.hover.enabled": false,
+    "workbench.editor.enablePreview": false,
+
+    /*
+        INTELLISENSE
+    */
+    // Controls if quick suggestions should show up while typing
+    "editor.quickSuggestions": false,
+    // Controls if suggestions should be accepted with "Enter" - in addition to "Tab". Helps to avoid ambiguity between inserting new lines and accepting suggestions.
+    "editor.acceptSuggestionOnEnter": false,
+    // Controls the delay in ms after which quick suggestions will show up.
+    "editor.quickSuggestionsDelay": 10,
+    // Enable word based suggestions
+    "editor.wordBasedSuggestions": false,
+    // Controls if the editor should automatically close brackets after opening them
+    "editor.autoClosingBrackets": false,
+    // Controls if suggestions should automatically show up when typing trigger characters
+    "editor.suggestOnTriggerCharacters": false,
+
+    /*
+        VIM
+    */
+    "vim.leader": " ",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.camelCaseMotion.enable": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "commands": [
+                "editor.action.marker.nextInFiles"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                "editor.action.marker.prevInFiles"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        }    
+    ]
+}

@@ -1,5 +1,6 @@
 {
   "coc.preferences.timeout": 5000,
   "coc.preferences.acceptSuggestionOnCommitCharacter": true,
-  "coc.preferences.autoTrigger": "always"
+  "coc.preferences.autoTrigger": "always",
+  "rust-client.rlsPath": "C:\\Users\\david\\.cargo\\bin\\rls.exe"
 }
