@@ -1,4 +1,8 @@
+# Symbolic Links vs. Shortcuts
 
+Note that windows shortcuts are not symlinks!
+
+To create symlinks, use `mklink` (available in elevated command prompt, not powershell, or enabled via dev tools, see https://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/)
 
 ## Steps
 
@@ -89,6 +93,9 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 * merge [windows-files/neovim/install-neovim-context.reg](windows-files/neovim/install-neovim-context.reg) to get the context menus
 * Install all the Neoclide extensions via `:CocInstall` e.g. `:CocInstall coc-json coc-css coc-tsserver coc-rls coc-yaml`
 * add environment var: `FZF_DEFAULT_COMMAND` to `'rg --files --hidden --glob "!.git/*"'`
+
+**VSCode config**
+* symlink (not shortcut!) settings.json and keybindings.json in vscode/ to their equivilents in %APPDATA%\Code\User
 
 **Setup key mapping**
 * use SharpKeys
