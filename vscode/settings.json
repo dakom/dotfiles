@@ -20,36 +20,34 @@
     "vim.leader": " ",
     "vim.handleKeys": {
         "<C-a>": false,
-        "<C-f>": false
+        "<C-f>": false,
     },
     "vim.camelCaseMotion.enable": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": [
-                "<leader>",
-                "j"
-            ],
+            "before": [ "<leader>", "j" ],
             "commands": [
                 "editor.action.marker.nextInFiles"
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "k"
-            ],
+            "before": [ "<leader>", "k" ],
             "commands": [
                 "editor.action.marker.prevInFiles"
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "h"
-            ],
+            "before": [ "<leader>", "h" ],
             "commands": [
                 "editor.action.showHover"
             ]
-        }    
+        },
+
+        {
+            "before": [ "t", "t" ],
+            "commands": [
+                "workbench.action.files.showOpenedFileInNewWindow"
+            ]
+        },
     ]
 }

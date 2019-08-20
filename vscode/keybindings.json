@@ -15,5 +15,5 @@
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
-    }
+    },
 ]
