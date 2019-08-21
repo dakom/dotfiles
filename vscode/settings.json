@@ -49,5 +49,6 @@
                 "workbench.action.files.showOpenedFileInNewWindow"
             ]
         },
-    ]
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }
