@@ -164,7 +164,7 @@ Plug 'Asheq/close-buffers.vim'
 
 " LanguageServer (diagnostics, completion, etc.)
 " Plug 'w0rp/ale'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Search / Grep
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -204,10 +204,7 @@ nmap <F6> :NERDTreeToggle<CR> " don't open at start in directory
 let g:NERDTreeHijackNetrw=0
 let loaded_netrw = 0 " needed to also prevent netrw from showing
 
-" BufExplorer - explore/next/previous: Alt-F12, F12, Shift-F12.
-nnoremap <silent> <M-F12> :BufExplorer<CR>
-nnoremap <silent> <F12> :bn<CR>
-nnoremap <silent> <S-F12> :bp<CR> 
+
 
 " ALE / Diagnostics (completion is handled by deoplete/LanguageClient)
 " let g:ale_completion_enabled = 1

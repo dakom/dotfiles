@@ -6,7 +6,7 @@
     "editor.minimap.enabled": false,
     "editor.hover.enabled": false,
     "editor.parameterHints.enabled": false,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "editor.quickSuggestions": true,
     "editor.acceptSuggestionOnEnter": "on",
     "editor.quickSuggestionsDelay": 10,
@@ -49,6 +49,13 @@
                 "workbench.action.files.showOpenedFileInNewWindow"
             ]
         },
+
+        {
+            "before": ["<leader>", "enter"],
+            "commands": [
+                "workbench.action.keepEditor"
+            ]
+        }
     ],
     "typescript.updateImportsOnFileMove.enabled": "always"
 }
