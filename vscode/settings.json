@@ -55,6 +55,12 @@
             "commands": [
                 "workbench.action.keepEditor"
             ]
+        },
+        {
+            "before": ["n"],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
         }
     ],
     "typescript.updateImportsOnFileMove.enabled": "always"
