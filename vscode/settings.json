@@ -8,7 +8,7 @@
     "workbench.editor.enablePreview": true,
     "editor.quickSuggestions": true,
     "editor.acceptSuggestionOnEnter": "on",
-	"editor.acceptSuggestionOnCommitCharacter": false
+	"editor.acceptSuggestionOnCommitCharacter": false,
     "editor.quickSuggestionsDelay": 10,
     "editor.wordBasedSuggestions": true,
     "editor.autoClosingBrackets": "never",
