@@ -20,5 +20,10 @@
     {
         "key": "f6",
         "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "enter",
+        "command": "-rust-analyzer.onEnter",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'rust'"
     }
 ]
