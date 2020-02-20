@@ -1,6 +1,7 @@
 {
     "rust-analyzer.raLspServerPath": "ra_lsp_server",
     "rust-analyzer.displayInlayHints": false,
+	"rust-analyzer.serverPath": "rust-analyzer",
     "editor.fontLigatures": true,
     "editor.fontFamily": "FuraCode Nerd Font Retina",
     "editor.fontSize": 19,
