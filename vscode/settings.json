@@ -9,7 +9,11 @@
     "editor.hover.enabled": false,
     "editor.parameterHints.enabled": false,
     "workbench.editor.enablePreview": true,
-    "editor.quickSuggestions": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
     "editor.acceptSuggestionOnEnter": "on",
 	"editor.acceptSuggestionOnCommitCharacter": false,
     "editor.quickSuggestionsDelay": 10,
