@@ -72,5 +72,6 @@
     ],
     "typescript.updateImportsOnFileMove.enabled": "always",
     "workbench.colorTheme": "Ayu One Dark Pro | Mirage",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "todo-tree.tree.showScanModeButton": false
 }
