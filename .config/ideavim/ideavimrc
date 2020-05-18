@@ -1,0 +1,44 @@
+set surround
+set easymotion
+set commentary
+let mapleader ="\<Space>"
+nmap <Space> <Leader>
+
+
+nmap <Leader>g :action GotoDeclaration<cr>
+nmap <Leader>b :action Back<cr>
+nmap <Leader>f :action Forward<cr>
+nmap <Leader>pu :action Vcs.Push<cr>
+nmap <Leader>t :action ExpressionTypeInfo<cr>
+
+
+" ----------- CORE KEYBINDINGS----------
+
+" close file
+nmap <Leader>q :action CloseActiveTab<cr>
+
+" open quick doc
+nmap <Leader>h :action QuickJavaDoc<cr>
+
+" find file
+nmap <C-p> :action GotoFile<cr>
+
+" error navigation
+nnoremap <Leader>j :action GotoNextError<CR>
+nnoremap <Leader>k :action GotoPreviousError<CR>
+
+
+" split tab (useful for making current split fullscreen - then :wq to go back)
+:noremap tt :tab split<CR>
+
+" use control-hjkl to navigate windows
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" Jump to line with enter
+:nnoremap <CR> G
+
+" use numeric keypad for enter
+:nmap <kEnter> <Enter>

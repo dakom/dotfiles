@@ -1,7 +1,4 @@
 {
-    "rust-analyzer.raLspServerPath": "ra_lsp_server",
-    "rust-analyzer.displayInlayHints": false,
-	"rust-analyzer.serverPath": "rust-analyzer",
     "editor.fontLigatures": true,
     "editor.fontFamily": "FuraCode Nerd Font Retina",
     "editor.fontSize": 19,
@@ -77,5 +74,10 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "workbench.colorTheme": "Ayu One Dark Pro | Mirage",
     "window.zoomLevel": 0,
-    "todo-tree.tree.showScanModeButton": false
+    "todo-tree.tree.showScanModeButton": false,
+    "rust-analyzer.inlayHints.parameterHints": false,
+    "rust-analyzer.inlayHints.typeHints": false,
+    "files.associations": {
+        "*.css": "postcss"
+    }
 }
