@@ -4,9 +4,32 @@ Note that windows shortcuts are not symlinks!
 
 To create symlinks, use `mklink` (available in elevated command prompt, not powershell, or enabled via dev tools, see https://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/)
 
+Everything is a bit disorganized, and more like latest notes. e.g. now that Windows Terminal is a thing all the ConEMU stuff isn't relevent - but is still maintained below as a reference.
+
+# New Notes
+
+## Terminal / Powershell / etc.
+
+1. Install Windows Terminal from the [Store](https://aka.ms/terminal)
+2. Install PowerShell 7 from [Github releases](https://github.com/PowerShell/PowerShell/releases) (artifacts/msi)
+3. Install [context menus](https://github.com/lextm/windowsterminal-shell) (might need to manually launch powershell 7 and install from there first)
+4. Change `defaultProfile` in Terminal settings.json to GUID of PowerShellCore - e.g. `"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",`
+5. Install posh-git and oh-my-posh
+   * `Install-Module posh-git -Scope CurrentUser`
+   * `Install-Module oh-my-posh -Scope CurrentUser`
+6. Make sure FuraCode is installed from NerdFonts
+7. Set profiles.defaults.fontFace to "FuraCode Nerd Font" in Terminal settings.json
+8. Copy [windows-files/powershell/Microsoft.PowerShell_profile.ps1](windows-files/powershell/Microsoft.PowerShell_profile.ps1) to $PROFILE (e.g. ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1)
+9. Copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\PowerShell\Modules\oh-my-posh\2.0.245\Themes)
+   * if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
+
+
+
+# Old Reference
 ## Steps
 
 **Install core things w/o Chocolatey** 
+* Terminal / PowerShell
 * Chocolatey itself
 * Office
 * Adobe Cloud
