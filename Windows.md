@@ -23,7 +23,13 @@ Everything is a bit disorganized, and more like latest notes. e.g. now that Wind
 9. Copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\PowerShell\Modules\oh-my-posh\2.0.245\Themes)
    * if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
 
+## Find/Replace
+1. Install DnGrep: http://dngrep.github.io/
 
+## Vim
+
+1. https://github.com/Kethku/neovide
+2. (see below?)
 
 # Old Reference
 ## Steps
