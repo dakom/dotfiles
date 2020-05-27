@@ -1,1 +1,1 @@
-Guifont! FuraCode NF:h13
+Guifont! FuraCode Nerd Font Mono:h17

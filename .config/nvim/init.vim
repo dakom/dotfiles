@@ -21,14 +21,8 @@ if g:os == "Linux"
     au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 endif
 
-" set font
-if g:os == "Darwin"
-    set guifont=FuraCode\ Nerd\ Font:h13
-elseif g:os == "Windows"
-    set guifont=FuraCode\ NF:h13
-else
-    set guifont=FuraCode\ Nerd\ Font\ Retina\ 13
-endif
+" font
+set guifont=FuraCode\ Nerd\ Font\ Mono:h17
 
 
 " enable true colors support
@@ -162,12 +156,11 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " toggle with F6
 Plug 'jlanzarotta/bufexplorer'
 Plug 'Asheq/close-buffers.vim'
 
-" LanguageServer (diagnostics, completion, etc.)
-" Plug 'w0rp/ale'
+" Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Search / Grep
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Syntax
@@ -177,7 +170,10 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Valloric/MatchTagAlways'
 
 " Theme
-Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
+Plug 'joshdick/onedark.vim'
+
+" Airline
 Plug 'vim-airline/vim-airline'
 
 " Vim-Plug End 
@@ -205,28 +201,9 @@ let g:NERDTreeHijackNetrw=0
 let loaded_netrw = 0 " needed to also prevent netrw from showing
 
 
-
-" ALE / Diagnostics (completion is handled by deoplete/LanguageClient)
-" let g:ale_completion_enabled = 1
-" let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_on_save = 1
-" let g:ale_lint_on_enter = 1
-" nmap <silent> <Leader>i <Plug>(ale_detail)
-" nmap <silent> <Leader>l <Plug>(ale_lint)
-" nmap <silent> <Leader>j <Plug>(ale_next_wrap)
-" nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
-" nmap <silent> <Leader>h <Plug>(ale_hover) 
-" nmap <silent> <Leader>d <Plug>(ale_go_to_definition) 
-" nmap <silent> <Leader>r <Plug>(ale_find_references) 
-" nmap <silent> <Leader>s :call AleSymbolSearch()<CR>
-" let g:ale_sign_error = '✘'
-" let g:ale_sign_warning = '⚠'
-
-" Coc / LanguageServer Autocomplete
-let cocpath = stdpath('config').'/config/coc.vim'
+" Coc / LanguageServer Autocomplete - in separate file
+let cocpath = stdpath('config').'\config\coc.vim'
 execute ("source ". cocpath)
-
-" source stdpath('config').'/config/coc.vim'
 
 " Search / Grep
 command! -bang -nargs=* Rg
@@ -244,11 +221,15 @@ nnoremap <silent> <C-p> :Files <cr>
 nnoremap <silent> <M-p> :Buffers<cr>
 " <M-S-p> for MRU
 nnoremap <silent> <M-S-p> :History<cr>
+" disable preview window
+let g:fzf_preview_window = ''
 
 " Theme
+" let g:palenight_terminal_italics=1
+" colorscheme palenight
 set background=dark
-let g:palenight_terminal_italics=1
-colorscheme palenight
+let g:onedark_terminal_italics=1
+colorscheme onedark
 
 " Airline
 let g:airline_powerline_fonts = 1

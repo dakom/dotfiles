@@ -23,8 +23,12 @@ Everything is a bit disorganized, and more like latest notes. e.g. now that Wind
 9. Copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\PowerShell\Modules\oh-my-posh\2.0.245\Themes)
    * if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
 
-## Find/Replace
-1. Install DnGrep: http://dngrep.github.io/
+## Paid Windows Extensions
+1. Groupy: https://www.stardock.com/products/groupy/
+2. FileMenu Tools: 
+
+## Free Windows Extensions
+1. DnGrep: http://dngrep.github.io/
 
 ## Vim
 
@@ -117,6 +121,7 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 * try installing pip locally through there and get-pip.py (available in web search)
 
 **Neovim config**
+* note plugin directory is ~/.local/share/nvim/plugged
 * pip install pynvim
 * npm install -g neovim
 * merge [windows-files/neovim/install-neovim-context.reg](windows-files/neovim/install-neovim-context.reg) to get the context menus
