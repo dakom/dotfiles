@@ -1,6 +1,5 @@
 " ----------SYSTEM--------------
 
-
 " Detect OS
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
@@ -24,6 +23,8 @@ endif
 " font
 set guifont=FuraCode\ Nerd\ Font\ Mono:h17
 
+" neovide
+let g:neovide_cursor_vfx_mode = "railgun"
 
 " enable true colors support
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -136,6 +137,11 @@ nmap <C-l> <C-w>l
 
 " use numeric keypad for enter
 :nmap <kEnter> <Enter>
+
+" ctrl-s for save
+nnoremap <silent><c-s> :<c-u>update<cr>
+vnoremap <silent><c-s> <c-c>:update<cr>gv
+inoremap <silent><c-s> <c-o>:update<cr>
 
 " -----PLUGINS------------
 
