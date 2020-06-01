@@ -43,6 +43,9 @@ syntax on
 " Fix resizing issue
 set guioptions+=k
 
+" Relative line numbers
+set relativenumber
+
 " Fix some cursor lag issue
 set timeoutlen=1000
 set ttimeoutlen=0
