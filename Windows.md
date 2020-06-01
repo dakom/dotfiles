@@ -6,35 +6,96 @@ To create symlinks, use `mklink` (available in elevated command prompt, not powe
 
 Everything is a bit disorganized, and more like latest notes. e.g. now that Windows Terminal is a thing all the ConEMU stuff isn't relevent - but is still maintained below as a reference.
 
+
 # New Notes
+
+## Media Creation Tools
+
+https://www.microsoft.com/en-us/software-download/windows10
+
+Scroll down (Download Tool Now - not Update Now)
+
+## Git config
+* Do the following:
+```
+git config --global user.email "your@email.com"
+git config --global user.name "Your Name"
+git config --global push.default simple
+git config --global core.ignorecase false
+# The above are generic, the following are strictly windows-only
+git config --global core.sshCommand "'C:\WINDOWS\System32\OpenSSH\ssh.exe'"
+git config --global core.autocrlf true
+git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
+```
+
+
+## SSH
+1.  Add SSH keys: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+2. Set ssh-agent to start automatically (in windows services: OpenSSH agent)
+3. Make sure SSH is all good (might only need to add passphrase once for ssh agent?)
+
+## Config
+1. Clone this repo to `~/dotfiles`
+2. cd ~/
+3. git clone git@github.com:dakom/dotfiles.git
+4. Set environment variable `XDG_CONFIG_HOME = ~/dotfiles/.config` (probably use windows path e.g. C:\Users\David\dotfiles\.config)
+
+## Fonts
+* https://github.com/ryanoasis/nerd-fonts (firacode / furacode)
+
 
 ## Terminal / Powershell / etc.
 
 1. Install Windows Terminal from the [Store](https://aka.ms/terminal)
 2. Install PowerShell 7 from [Github releases](https://github.com/PowerShell/PowerShell/releases) (artifacts/msi)
-3. Install [context menus](https://github.com/lextm/windowsterminal-shell) (might need to manually launch powershell 7 and install from there first)
-4. Change `defaultProfile` in Terminal settings.json to GUID of PowerShellCore - e.g. `"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",`
+3. UseFileMenu Tools or install [context menus](https://github.com/lextm/windowsterminal-shell) (might need to manually launch powershell 7 and install from there first)
+4. Copy/paste [windows-files/terminal/settings.json]
 5. Install posh-git and oh-my-posh
    * `Install-Module posh-git -Scope CurrentUser`
    * `Install-Module oh-my-posh -Scope CurrentUser`
-6. Make sure FuraCode is installed from NerdFonts
-7. Set profiles.defaults.fontFace to "FuraCode Nerd Font" in Terminal settings.json
-8. Copy [windows-files/powershell/Microsoft.PowerShell_profile.ps1](windows-files/powershell/Microsoft.PowerShell_profile.ps1) to $PROFILE (e.g. ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1)
-9. Copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\PowerShell\Modules\oh-my-posh\2.0.245\Themes)
+6. Set profiles.defaults.fontFace to "FuraCode Nerd Font" in Terminal settings.json
+7. Copy [windows-files/powershell/Microsoft.PowerShell_profile.ps1](windows-files/powershell/Microsoft.PowerShell_profile.ps1) to $PROFILE (e.g. ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1)
+8. Copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\PowerShell\Modules\oh-my-posh\2.0.245\Themes)
    * if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
+
+## Setup key mapping
+1. use SharpKeys - import [windows-files/sharp-keys/sharp-keys.skl]
 
 ## Paid Windows Extensions
 1. Groupy: https://www.stardock.com/products/groupy/
-2. FileMenu Tools: 
+2. FileMenu Tools
 
 ## Free Windows Extensions
 1. DnGrep: http://dngrep.github.io/
 
 ## Vim
 
-1. https://github.com/Kethku/neovide
-2. (see below?)
+1. Install neovim
+2. Install neovide: https://github.com/Kethku/neovide
+3. note plugin directory is ~/.local/share/nvim/plugged
+4. pip install pynvim
+5. npm install -g neovim
+6. use FileMenu Tools to get context menus (or, if neovim-qt, merge [windows-files/neovim/install-neovim-context.reg](windows-files/neovim/install-neovim-context.reg))
+7. add environment var: `FZF_DEFAULT_COMMAND` to `'rg --files --hidden --glob "!.git/*"'`
+8. Neoclide - https://github.com/neoclide/coc.nvim
+9. :CocInstall coc-json coc-css coc-tsserver coc-rust-analyzer coc-yaml
 
+## VSCode
+
+1. symlink (not shortcut!) settings.json and keybindings.json in vscode/ to their equivilents in %APPDATA%\Code\User
+
+## Python
+
+1. Install python 3
+2. install pip (via choco? winget?)
+3. If problems - try renaming python37\python.exe to python3.exe
+4. try installing pip locally through there and get-pip.py (available in web search)
+
+# Gcloud 
+1. might need to use cmd instead of powershell because gcloud tools suck and don't support unicode?
+2. gcloud components install beta
+
+----
 # Old Reference
 ## Steps
 
@@ -81,62 +142,13 @@ Everything is a bit disorganized, and more like latest notes. e.g. now that Wind
 * Use ConEmu settings -> Integration to register context menu
   * {powershell} -cur_console:n
 
-**Powershell config**
-* Copy [windows-files/powershell/Microsoft.PowerShell_profile.ps1](windows-files/powershell/Microsoft.PowerShell_profile.ps1) to $PROFILE (e.g. ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1)
 
-**Oh-My-Posh config**
-* copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\WindowsPowerShell\Modules\oh-my-posh\2.0.245\Themes)
-* if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
-
-**SSH Config**
-* Add SSH keys: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-* Set ssh-agent to start automatically (in windows services: OpenSSH agent)
-* Make sure SSH is all good (might only need to add passphrase once for ssh agent?)
-
-
-**Git config**
-* Do the following:
-```
-git config --global user.email "your@email.com"
-git config --global user.name "Your Name"
-git config --global push.default simple
-git config --global core.ignorecase false
-# The above are generic, the following are strictly windows-only
-git config --global core.sshCommand "'C:\WINDOWS\System32\OpenSSH\ssh.exe'"
-git config --global core.autocrlf true
-git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
-
-```
-
-**Clone this repo to ~/dotfiles**
-* cd ~/
-* git clone git@github.com:dakom/dotfiles.git
-* Set environment variable `XDG_CONFIG_HOME = ~/dotfiles/.config` (probably use windows path e.g. C:\Users\David\dotfiles\.config)
-
-**Python config**
-* It's a little annoying since google cloud needs python2 and we want both for vim
-* Currently - install python3 and python2, making python2 the default
-* install pip via choco
-* try renaming python37\python.exe to python3.exe
-* try installing pip locally through there and get-pip.py (available in web search)
 
 **Neovim config**
-* note plugin directory is ~/.local/share/nvim/plugged
-* pip install pynvim
-* npm install -g neovim
-* merge [windows-files/neovim/install-neovim-context.reg](windows-files/neovim/install-neovim-context.reg) to get the context menus
-* Install all the Neoclide extensions via `:CocInstall` e.g. `:CocInstall coc-json coc-css coc-tsserver coc-rls coc-yaml`
-* add environment var: `FZF_DEFAULT_COMMAND` to `'rg --files --hidden --glob "!.git/*"'`
 
-**VSCode config**
-* symlink (not shortcut!) settings.json and keybindings.json in vscode/ to their equivilents in %APPDATA%\Code\User
 
-**Setup key mapping**
-* use SharpKeys
 
-**gcloud config**
-* might need to use cmd instead of powershell because gcloud tools suck and don't support unicode?
-* gcloud components install beta
+
 
 ## References
 
@@ -151,12 +163,3 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 * https://blog.frankfu.com.au/2018/12/15/ssh-on-windows-10-1803/
 * https://taraksharma.com/supercharging-powershell-with-hyper-oh-my-posh-posh-git/
 
-**Fonts**
-* https://github.com/ryanoasis/nerd-fonts
-(used FiraCode... or was it FiraCode mono retina something or other)
-
-## TODO (nice to haves)
-
-* Get powershell (and hence alacritty?) to work with proper unicode
-* be able to cd ~/links/project/etc.
-* Get ligatures and true color working nicely in Alacritty (e.g. to open nvim)
