@@ -188,6 +188,9 @@ Plug 'joshdick/onedark.vim'
 " Airline
 Plug 'vim-airline/vim-airline'
 
+" VimBeGood (training only)
+Plug 'ThePrimeagen/vim-be-good'
+
 " Vim-Plug End 
 call plug#end()
 
@@ -229,10 +232,8 @@ set grepprg=rg\ --vimgrep
 " set ctrl-p similarities to open files
 nnoremap <silent> <C-t> :Files <cr>
 nnoremap <silent> <C-p> :Files <cr>
-" <M-p> for open buffers
-nnoremap <silent> <M-p> :Buffers<cr>
-" <M-S-p> for MRU
-nnoremap <silent> <M-S-p> :History<cr>
+nnoremap <silent> <C-b> :Buffers<cr>
+nnoremap <silent> <C-M-h> :History<cr>
 " disable preview window
 let g:fzf_preview_window = ''
 
