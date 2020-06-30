@@ -21,7 +21,7 @@ if g:os == "Linux"
 endif
 
 " font
-set guifont=FuraCode\ Nerd\ Font\ Mono:h17
+set guifont=FiraCode\ NF:h17
 
 " neovide
 let g:neovide_cursor_vfx_mode = "railgun"

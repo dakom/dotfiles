@@ -1,6 +1,6 @@
 {
     "editor.fontLigatures": true,
-    "editor.fontFamily": "FuraCode Nerd Font Retina",
+    "editor.fontFamily": "FiraCode NF",
     "editor.fontSize": 19,
     "editor.minimap.enabled": false,
     "editor.hover.enabled": false,
@@ -72,7 +72,7 @@
         }    
     ],
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "workbench.colorTheme": "Ayu One Dark Pro | Mirage",
+    "workbench.colorTheme": "One Dark Pro",
     "window.zoomLevel": 0,
     "todo-tree.tree.showScanModeButton": false,
     "rust-analyzer.inlayHints.parameterHints": false,

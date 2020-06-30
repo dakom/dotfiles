@@ -1,5 +1,5 @@
 ﻿# posh-git
-Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
+Import-Module 'C:\Users\david\Documents\PowerShell\Modules\posh-git\0.7.3\posh-git.psd1'
 
 # oh my posh
 Import-Module oh-my-posh

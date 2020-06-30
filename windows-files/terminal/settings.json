@@ -28,7 +28,7 @@
         // Put settings here that you want to apply to all profiles.
         "defaults":
         {
-            "fontFace": "FuraCode Nerd Font",
+            "fontFace": "FiraCode NF",
             "suppressApplicationTitle": true,
             "colorScheme": "One Half Dark",
             "backgroundImage": "C:\\Users\\david\\dotfiles\\windows-files\\terminal\\terminal-bg.jpg"
@@ -63,6 +63,12 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
