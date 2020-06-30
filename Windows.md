@@ -25,11 +25,14 @@ git config --global core.ignorecase false
 # The above are generic, the following are strictly windows-only
 git config --global core.sshCommand "'C:\WINDOWS\System32\OpenSSH\ssh.exe'"
 git config --global core.autocrlf true
-git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
+config --global core.editor "'C:/Program Files/Neovim/bin/nvim-qt.exe'"
 ```
 
 
 ## SSH
+
+(these steps might not be necessary anymore...)
+
 1.  Add SSH keys: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 2. Set ssh-agent to start automatically (in windows services: OpenSSH agent)
 3. Make sure SSH is all good (might only need to add passphrase once for ssh agent?)
@@ -41,7 +44,7 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 4. Set environment variable `XDG_CONFIG_HOME = ~/dotfiles/.config` (probably use windows path e.g. C:\Users\David\dotfiles\.config)
 
 ## Fonts
-* https://github.com/ryanoasis/nerd-fonts (firacode / furacode)
+* https://github.com/ryanoasis/nerd-fonts (firacode)
 
 
 ## Terminal / Powershell / etc.
@@ -58,6 +61,10 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 8. Copy [windows-files/oh-my-posh/David.psm1](windows-files/oh-my-posh/David.psm1) to $ThemeSettings.MyThemesLocation (e.g. C:\Program Files\PowerShell\Modules\oh-my-posh\2.0.245\Themes)
    * if weird stuff - make sure the theme and powershell profile are saved to utf-8 w/ bom (use notepad++)
 
+## FileMenu Tools
+
+This is a paid app.. import [windows-files/filemenu/filemenu-tools.ini]
+
 ## Setup key mapping
 1. use SharpKeys - import [windows-files/sharp-keys/sharp-keys.skl]
 
@@ -71,14 +78,15 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 ## Vim
 
 1. Install neovim
-2. Install neovide: https://github.com/Kethku/neovide
-3. note plugin directory is ~/.local/share/nvim/plugged
-4. pip install pynvim
-5. npm install -g neovim
-6. use FileMenu Tools to get context menus (or, if neovim-qt, merge [windows-files/neovim/install-neovim-context.reg](windows-files/neovim/install-neovim-context.reg))
+2. Install neovide: https://github.com/Kethku/neovide (perhaps build first - by installing CMake and LLVM and putting those in the path)
+3. Copy neovide to neovim bin folder (and put it on path)
+4. note plugin directory is ~/.local/share/nvim/plugged
+5. pip install pynvim
+6. npm install -g neovim
 7. add environment var: `FZF_DEFAULT_COMMAND` to `'rg --files --hidden --glob "!.git/*"'`
 8. Neoclide - https://github.com/neoclide/coc.nvim
 9. :CocInstall coc-json coc-css coc-tsserver coc-rust-analyzer coc-yaml
+
 
 ## VSCode
 
@@ -91,9 +99,11 @@ git config --global core.editor "C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe"
 3. If problems - try renaming python37\python.exe to python3.exe
 4. try installing pip locally through there and get-pip.py (available in web search)
 
-# Gcloud 
-1. might need to use cmd instead of powershell because gcloud tools suck and don't support unicode?
-2. gcloud components install beta
+# Other apps
+
+1. Always try to first search via `winget search [name]` and install there. 
+2. If there's a naming conflict, use `--exact`
+3. As a last resort - separate installers
 
 ----
 # Old Reference
