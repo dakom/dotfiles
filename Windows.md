@@ -99,6 +99,16 @@ This is a paid app.. import [windows-files/filemenu/filemenu-tools.ini]
 3. If problems - try renaming python37\python.exe to python3.exe
 4. try installing pip locally through there and get-pip.py (available in web search)
 
+## OpenSSL
+
+1. visit https://slproweb.com/products/Win32OpenSSL.html (yes, the site says win32 but it has win64 msi)
+2. after installing, add C:\Program Files\OpenSSL-Win64\bin to path
+3. add C:\Program Files\OpenSSL-Win64 to OPENSSL_DIR env var
+
+## Postgres
+  1. install via the regular installer
+  2. make sure that both of the postgres `bin` and `lib` dirs are on the PATH
+
 # Other apps
 
 1. Always try to first search via `winget search [name]` and install there. 
