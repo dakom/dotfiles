@@ -109,6 +109,10 @@ This is a paid app.. import [windows-files/filemenu/filemenu-tools.ini]
   1. install via the regular installer
   2. make sure that both of the postgres `bin` and `lib` dirs are on the PATH
 
+If just using this for client libs (not for server, i.e. planning to use docker) make sure to manually disable the service at startup.
+
+Otherwise there will be a port conflict [and it might not even show up in logs](https://github.com/sameersbn/docker-postgresql/issues/112#issuecomment-579712540)
+
 # Other apps
 
 1. Always try to first search via `winget search [name]` and install there. 
