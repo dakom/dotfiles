@@ -44,7 +44,7 @@ syntax on
 set guioptions+=k
 
 " Relative line numbers
-set relativenumber
+" set relativenumber
 
 " Fix some cursor lag issue
 set timeoutlen=1000
